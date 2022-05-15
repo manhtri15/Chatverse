@@ -29,7 +29,7 @@ export default function Login() {
       <Row justify='center' style={{ height: 800 }}>
         <Col span={8}>
           <Title style={{ textAlign: 'center' }} level={3}>
-            Fun Chat
+          AWPETS - A Web that People Easily Tell Stories
           </Title>
           <Button
             style={{ width: '100%', marginBottom: 5 }}
