@@ -56,18 +56,19 @@ function DebounceSelect({
   );
 }
 
-async function fetchUserList(search, curMembers) {
+export  async function fetchUserList(search, curMembers) {
   return db
     .collection('users')
     .where('keywords', 'array-contains', search?.toLowerCase())
     .orderBy('displayName')
-    .limit(20)
+    .limit(1000)
     .get()
     .then((snapshot) => {
       return snapshot.docs
         .map((doc) => ({
           label: doc.data().displayName,
           value: doc.data().uid,
+          email: doc.data().email,
           photoURL: doc.data().photoURL,
         }))
         .filter((opt) => !curMembers.includes(opt.value));
