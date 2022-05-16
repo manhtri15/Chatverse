@@ -16,7 +16,7 @@
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-10px);
 }
 
 /* Button Colors and Styles */
