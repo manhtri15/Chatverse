@@ -1,7 +1,9 @@
 import React from 'react';
-import {Row, Col, Button, Typography} from 'antd';
+import {Row, Col, Typography} from 'antd';
 import firebase, {auth, db} from '../../firebase/config';
 import {addDocument, generateKeywords} from '../../firebase/services';
+import "../../components/Login/styles.css";
+import { Button } from "../../components/Button";
 const LaucherIcon = require('../../assets/ic_laucher.png');
 const {Title} = Typography;
 
@@ -65,4 +67,3 @@ export default function Login(){
 		</div>
 	);
 }
-
