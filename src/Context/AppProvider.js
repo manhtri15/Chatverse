@@ -58,6 +58,6 @@ export default function AppProvider({ children }) {
     >
       {children}
     </AppContext.Provider>
-  );
+  ); 
 }
     
