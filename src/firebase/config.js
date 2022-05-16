@@ -30,3 +30,4 @@ if (window.location.hostname === 'localhost') {
 
 export { db, auth,storage };
 export default firebase;
+
