@@ -58,6 +58,7 @@ export default function Login(){
 					<Button
 						style={{marginLeft: 16,width: 200,
 							height: 50,}}
+							buttonStyle="btn--primary--solid"
 						onClick={() => handleLogin(fbProvider)}
 					>
 						Đăng nhập bằng Facebook
