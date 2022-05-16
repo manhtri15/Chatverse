@@ -43,7 +43,6 @@ export default function AppProvider({ children }) {
     setIsAddRoomVisible(false);
     setIsInviteMemberVisible(false);
   };
-
   return (
     <AppContext.Provider
       value={{
