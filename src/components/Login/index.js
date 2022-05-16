@@ -13,7 +13,7 @@ export default function Login(){
 		const {additionalUserInfo, user} = await auth.signInWithPopup(provider);
 		let users = await db
 			.collection('users')
-			.where('email', '==', additionalUserInfo?.profile.email)
+			.where('email', '==', additionalUserInfo?.profile.email) 
 			.limit(1)
 			.get();
 		console.log(users.docs.length);
@@ -30,30 +30,32 @@ export default function Login(){
 	};
 	
 	return (
-		<div style={{backgroundColor: '#9900ff', height: '100vh',display:"flex", justifyContent: "center",alignItems: 'center'}}>
+		<div style={{backgroundColor: '#2e4600', height: '100vh',display:"flex", justifyContent: "center",alignItems: 'center'}}>
 			
 			
 			<div style={{
-				width: 500,
-				height: 300,
-				padding: 32,display:"flex", justifyContent: "center",alignItems: 'center',
-				backgroundColor: "white",
-				borderRadius: 4,
+				width: 800,
+				height: 500,
+				padding: 64,display:"flex", justifyContent: "center",alignItems: 'center',
+				backgroundColor: '#A2C523',
+				borderRadius: 8,
 				flexDirection:'column'
 			}}>
-				<img style={{marginLeft: 8, marginRight: 8, marginBottom: 16}} src={LaucherIcon} width='100' height='100'/>
+				<img style={{marginLeft: 16, marginRight: 16, marginBottom: 32}} src={LaucherIcon} width='200' height='200'/>
 				
-				<Title style={{textAlign: 'center', color: '#9900ff'}} level={3}>ĐĂNG NHẬP</Title>
+				<Title style={{textAlign: 'center', color: '#9900ff'}} level={6}>Don't play with fire, play with Chatverse!</Title>
 				
-				<div style={{marginTop:30,flexDirection:'row',justifyContent:'space-between'}}>
+				<div style={{marginTop:60,flexDirection:'row',justifyContent:'space-between'}}>
 					<Button
-						style={{marginLeft:16}}
+						style={{marginLeft: 16,width: 200,
+							height: 50,}}
 						onClick={() => handleLogin(googleProvider)}
 					>
 						Đăng nhập bằng Google
 					</Button>
 					<Button
-						style={{marginLeft: 16}}
+						style={{marginLeft: 16,width: 200,
+							height: 50,}}
 						onClick={() => handleLogin(fbProvider)}
 					>
 						Đăng nhập bằng Facebook
