@@ -36,3 +36,4 @@ const useFirestore = (collection, condition) => {
 };
 
 export default useFirestore;
+
