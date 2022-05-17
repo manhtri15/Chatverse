@@ -33,7 +33,6 @@ export default function AppProvider({ children }) {
       compareValue: selectedRoom.members,
     };
   }, [selectedRoom.members]);
-
   const members = useFirestore('users', usersCondition);
 
   const clearState = () => {
