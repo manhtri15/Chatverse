@@ -11,7 +11,7 @@ const PanelStyled = styled(Panel)`
   &&& {
     .ant-collapse-header,
     p {
-      color: white;
+      color: black;
     }
 
     .ant-collapse-content-box {
@@ -19,8 +19,10 @@ const PanelStyled = styled(Panel)`
     }
 
     .add-room {
-      color: white;
-      padding: 0;
+      color: black;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      
     }
   }
 `;
@@ -41,19 +43,20 @@ export default function RoomList() {
 
   return (
     <Collapse ghost defaultActiveKey={['1']}>
-      <PanelStyled header='Danh sách các phòng' key='1'>
+      <PanelStyled header='Danh sách các phòng' key='1'>  
         {rooms.map((room) => (
-          <Button buttonStyle ="btn--warning--outline" buttonSize="btn--small" key={room.id} onClick={() => setSelectedRoomId(room.id)}>
-            {room.name}
-          </Button>
+           <div style={{marginTop:16}}>
+             <Button buttonStyle ="btn--warning--outline" buttonSize="btn--small" key={room.id} onClick={() => setSelectedRoomId(room.id)}>
+               <div style={{color: 'black',fontSize: 14}}>{room.name}</div>
+             </Button>
+           </div>
+         
         ))}
         <LinkStyled
           type='text'
           icon={<PlusSquareOutlined />}
           className='add-room'
-          onClick={handleAddRoom}
-        >
-          Thêm phòng
+          onClick={handleAddRoom}><div style={{color: 'black',fontSize: 14}}>+    Thêm phòng</div>
         </LinkStyled>
       </PanelStyled>
     </Collapse>

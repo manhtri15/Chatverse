@@ -30,7 +30,7 @@ export default function UserInfo() {
         <Avatar src={photoURL}>
           {photoURL ? '' : displayName?.charAt(0)?.toUpperCase()}
         </Avatar>
-        <Typography.Text className='username'>{displayName}</Typography.Text>
+        <Typography.Text className='username'><div style={{color: 'black'}}>{displayName}</div></Typography.Text>
       </div>
       <Button
         ghost
@@ -40,7 +40,7 @@ export default function UserInfo() {
           auth.signOut();
         }}
       >
-        Đăng xuất
+        <div style={{color: 'black'}}>Đăng xuất</div>
       </Button>
     </WrapperStyled>
   );
