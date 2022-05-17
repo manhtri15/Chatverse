@@ -69,5 +69,3 @@ export default function Message({text, displayName, createdAt, photoURL, fileTyp
 		</div>
 	</WrapperStyled>);
 }
-
-

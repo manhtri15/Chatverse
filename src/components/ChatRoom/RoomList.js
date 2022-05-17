@@ -1,5 +1,6 @@
 import React from 'react';
-import { Collapse, Typography, Button } from 'antd';
+import { Collapse, Typography} from 'antd';
+import { Button } from "../../components/Button";
 import styled from 'styled-components';
 import { PlusSquareOutlined } from '@ant-design/icons';
 import { AppContext } from '../../Context/AppProvider';
@@ -42,21 +43,19 @@ export default function RoomList() {
     <Collapse ghost defaultActiveKey={['1']}>
       <PanelStyled header='Danh sách các phòng' key='1'>
         {rooms.map((room) => (
-          <LinkStyled key={room.id} onClick={() => setSelectedRoomId(room.id)}>
+          <Button buttonStyle ="btn--warning--outline" buttonSize="btn--small" key={room.id} onClick={() => setSelectedRoomId(room.id)}>
             {room.name}
-          </LinkStyled>
+          </Button>
         ))}
-        <Button
+        <LinkStyled
           type='text'
           icon={<PlusSquareOutlined />}
           className='add-room'
           onClick={handleAddRoom}
         >
           Thêm phòng
-        </Button>
+        </LinkStyled>
       </PanelStyled>
     </Collapse>
   );
 }
-
-
