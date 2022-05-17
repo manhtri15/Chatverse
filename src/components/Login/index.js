@@ -48,16 +48,19 @@ export default function Login(){
 				
 				<div style={{marginTop:60,flexDirection:'row',justifyContent:'space-between'}}>
 					<Button
-						style={{marginLeft: 16,width: 150,
-							height: 40,}}
+						// style={{marginLeft: 16,width: 150,
+						// 	height: 40,}}
+						buttonStyle="btn--primary--solid"
+						buttonSize="btn--medium"
 						onClick={() => handleLogin(googleProvider)}
 					>
 						Đăng nhập bằng Google
 					</Button>
 					<Button
-						style={{marginLeft: 16,width: 150,
-							height: 40,}}
+						// style={{marginLeft: 16,width: 150,
+						// 	height: 40,}}
 							buttonStyle="btn--primary--solid"
+							buttonSize="btn--medium"
 						onClick={() => handleLogin(fbProvider)}
 					>
 						Đăng nhập bằng Facebook
