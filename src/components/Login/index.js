@@ -3,7 +3,6 @@ import {Row, Col, Typography} from 'antd';
 import firebase, {auth, db} from '../../firebase/config';
 import {addDocument, generateKeywords} from '../../firebase/services';
 import { Button } from "../../components/Button";
-import "../../components/Login/styles.css";
 const LaucherIcon = require('../../assets/ic_laucher.png');
 const {Title} = Typography;
 
