@@ -5,6 +5,7 @@
   --success: #ABE188;
   --white: #fdfdfd;
   --dark: #181717;
+  --sidebar: #336b87;
 }
 
 .btn {
@@ -52,9 +53,9 @@
 }
 
 .btn--warning--outline {
-  background-color: transparent;
-  border: 2px solid var(--warning);
-  color: var(--warning);
+  background-color: rgb(0, 255, 98);
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
 }
 
 .btn--danger--outline {
@@ -79,4 +80,8 @@
 .btn--large {
   padding: 15px 30px;
   font-size: 20px;
+}
+.btn--small{
+  padding: 5px 10px;
+  font-size: 16;
 }
