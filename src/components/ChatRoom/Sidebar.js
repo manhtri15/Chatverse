@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 const SidebarStyled = styled.div`
   background: #336b87;
-  color: white;
-  height: 100vh;
+  color: dark;
+  height: 200vh;
 `;
 
 export default function Sidebar() {
@@ -17,10 +17,11 @@ export default function Sidebar() {
         <Col span={24}>
           <UserInfo />
         </Col>
-        <Col span={24}>
-         <RoomList />
+        <Col span={24}>   
+         <RoomList />   
         </Col>
       </Row>
     </SidebarStyled>
   );
 }
+//update Sidebar
