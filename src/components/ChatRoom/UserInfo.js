@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Avatar, Typography } from 'antd';
 import styled from 'styled-components';
 
-
 import { auth } from '../../firebase/config';
 import { AuthContext } from '../../Context/AuthProvider';
 import { AppContext } from '../../Context/AppProvider';
@@ -14,13 +13,11 @@ const WrapperStyled = styled.div`
   padding: 12px 16px;
   border-bottom: 1px solid rgba(82, 38, 83);
 
-
   .username {
-    color: black;
-    margin-left: 10px;
+    color: white;
+    margin-left: 5px;
   }
 `;
-
 
 export default function UserInfo() {
   const {
@@ -45,12 +42,11 @@ export default function UserInfo() {
           auth.signOut();
         }}
       >
-        
+  
+   
         Đăng xuất
       </Button>
     </WrapperStyled>
   );
 }
-
-
-
+//updatelan1
