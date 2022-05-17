@@ -2,8 +2,8 @@ import React from 'react';
 import {Row, Col, Typography} from 'antd';
 import firebase, {auth, db} from '../../firebase/config';
 import {addDocument, generateKeywords} from '../../firebase/services';
-import "../../components/Login/styles.css";
 import { Button } from "../../components/Button";
+import "../../components/Login/styles.css";
 const LaucherIcon = require('../../assets/ic_laucher.png');
 const {Title} = Typography;
 
@@ -49,15 +49,15 @@ export default function Login(){
 				
 				<div style={{marginTop:60,flexDirection:'row',justifyContent:'space-between'}}>
 					<Button
-						style={{marginLeft: 16,width: 200,
-							height: 50,}}
+						style={{marginLeft: 16,width: 150,
+							height: 40,}}
 						onClick={() => handleLogin(googleProvider)}
 					>
 						Đăng nhập bằng Google
 					</Button>
 					<Button
-						style={{marginLeft: 16,width: 200,
-							height: 50,}}
+						style={{marginLeft: 16,width: 150,
+							height: 40,}}
 							buttonStyle="btn--primary--solid"
 						onClick={() => handleLogin(fbProvider)}
 					>
@@ -68,4 +68,3 @@ export default function Login(){
 		</div>
 	);
 }
-
