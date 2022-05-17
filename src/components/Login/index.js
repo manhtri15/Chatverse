@@ -2,8 +2,8 @@ import React from 'react';
 import {Row, Col, Typography} from 'antd';
 import firebase, {auth, db} from '../../firebase/config';
 import {addDocument, generateKeywords} from '../../firebase/services';
-import { Button } from "../../components/Button";
-import "../../components/Login/styles.css";
+import {Button} from "../Button";
+
 const LaucherIcon = require('../../assets/ic_laucher.png');
 const {Title} = Typography;
 
@@ -15,7 +15,7 @@ export default function Login(){
 		const {additionalUserInfo, user} = await auth.signInWithPopup(provider);
 		let users = await db
 			.collection('users')
-			.where('email', '==', additionalUserInfo?.profile.email) 
+			.where('email', '==', additionalUserInfo?.profile.email)
 			.limit(1)
 			.get();
 		console.log(users.docs.length);
@@ -32,33 +32,46 @@ export default function Login(){
 	};
 	
 	return (
-		<div style={{backgroundColor: '#2e4600', height: '100vh',display:"flex", justifyContent: "center",alignItems: 'center'}}>
+		<div style={{
+			backgroundImage: 'url(https://wallpaperaccess.com/full/17520.jpg)',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: "cover",
+			height: '100vh',
+			display: "flex",
+			justifyContent: "center",
+			alignItems: 'center'
+		}}>
 			
 			
 			<div style={{
 				width: 800,
 				height: 500,
-				padding: 64,display:"flex", justifyContent: "center",alignItems: 'center',
-				backgroundColor: '#A2C523',
+				padding: 64, display: "flex", justifyContent: "center", alignItems: 'center',
+				backgroundColor: '#F2EEE5',
 				borderRadius: 8,
-				flexDirection:'column'
+				flexDirection: 'column'
 			}}>
-				<img style={{marginLeft: 16, marginRight: 16, marginBottom: 32}} src={LaucherIcon} width='200' height='200'/>
+				<img style={{marginLeft: 16, marginRight: 16, marginBottom: 32}} src={LaucherIcon} width='200'
+				     height='200'/>
 				
-				<Title style={{textAlign: 'center', color: '#9900ff'}} level={6}>Don't play with fire, play with Chatverse!</Title>
+				<Title style={{textAlign: 'center', color: '#BE7575'}} level={6}>Don't play with fire, play with
+					Chatverse!</Title>
 				
-				<div style={{marginTop:60,flexDirection:'row',justifyContent:'space-between'}}>
+				<div style={{marginTop: 60, flexDirection: 'row', justifyContent: 'space-between'}}>
 					<Button
-						style={{marginLeft: 16,width: 150,
-							height: 40,}}
+						// style={{marginLeft: 16,width: 150,
+						// 	height: 40,}}
+						buttonStyle="btn--primary--solid"
+						buttonSize="btn--medium"
 						onClick={() => handleLogin(googleProvider)}
 					>
 						Đăng nhập bằng Google
 					</Button>
 					<Button
-						style={{marginLeft: 16,width: 150,
-							height: 40,}}
-							buttonStyle="btn--primary--solid"
+						// style={{marginLeft: 16,width: 150,
+						// 	height: 40,}}
+						buttonStyle="btn--primary--solid"
+						buttonSize="btn--medium"
 						onClick={() => handleLogin(fbProvider)}
 					>
 						Đăng nhập bằng Facebook
