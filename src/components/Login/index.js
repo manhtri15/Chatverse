@@ -46,22 +46,28 @@ export default function Login(){
 			<div style={{
 				width: 800,
 				height: 500,
-				padding: 64, display: "flex", justifyContent: "center", alignItems: 'center',
-				backgroundColor: '#F2EEE5',
+				padding: 64, 
+				display: "flex", 
+				justifyContent: "center", 
+				alignItems: 'center',
+				//backgroundColor: '#F2EEE5',
+				backgroundImage: 'url(https://wallpaperaccess.com/full/17520.jpg)',
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: "cover",
 				borderRadius: 8,
 				flexDirection: 'column'
 			}}>
 				<img style={{marginLeft: 16, marginRight: 16, marginBottom: 32}} src={LaucherIcon} width='200'
 				     height='200'/>
 				
-				<Title style={{textAlign: 'center', color: '#BE7575'}} level={6}>Don't play with fire, play with
+				<Title style={{textAlign: 'center', color: '#F2EEE5', fontSize: 50 }} level={6}>Don't play with fire, play with
 					Chatverse!</Title>
 				
 				<div style={{marginTop: 60, flexDirection: 'row', justifyContent: 'space-between'}}>
 					<Button
 						// style={{marginLeft: 16,width: 150,
 						// 	height: 40,}}
-						buttonStyle="btn--primary--solid"
+						buttonStyle="btn--primary--outline"
 						buttonSize="btn--medium"
 						onClick={() => handleLogin(googleProvider)}
 					>
@@ -70,7 +76,7 @@ export default function Login(){
 					<Button
 						// style={{marginLeft: 16,width: 150,
 						// 	height: 40,}}
-						buttonStyle="btn--primary--solid"
+						buttonStyle="btn--primary--outline"
 						buttonSize="btn--medium"
 						onClick={() => handleLogin(fbProvider)}
 					>
