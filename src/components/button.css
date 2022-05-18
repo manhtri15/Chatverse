@@ -1,5 +1,5 @@
 :root {
-  --primary: #39A9DB;
+  --primary: #F2EEE5;
   --warning: #F9DC5C;
   --danger: #E84855;
   --success: #ABE188;
@@ -29,6 +29,13 @@
   margin-right: 32px;
 }
 
+.btn--primary--outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  margin-right: 32px;
+}
+
 .btn--warning--solid {
   background-color: var(--warning);
   color: var(--dark);
@@ -47,11 +54,7 @@
   border: none;
 }
 
-.btn--primary--outline {
-  background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-}
+
 
 .btn--warning--outline {
   background-color: #C9D99E;
